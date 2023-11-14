@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Natural number</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+        }
+
+        body {
+            background: url('https://images.unsplash.com/photo-1497654492204-88d912c94bc1?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            height: 350px;
+            width: 500px;
+            margin-top: 120px;
+            padding: 13px;
+            padding-top: 80px;
+            background-color: rgba(255, 255, 255, 0.052);
+            backdrop-filter: blur(40px);
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 500px;
+            border-radius: 15px;
+            border: 1px solid gray;
+        }
+
+        h1,
+        input,
+        button,
+        h3 {
+            margin: 10px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 0;
+        }
+
+        h1,
+        h3 {
+            color: white;
+        }
+
+        button {
+            color: white;
+            background: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>SUM OF NATURAL NUMBERS</h1>
+        <input id="number" placeholder="Enter a number">
+        <button onclick="sumOf()"> Answer </button>
+        <h3 id="head"></h3>
+    </div>
+    <script>
+        function sumOf() {
+            var n, i, sum = 0;
+            n = parseInt(document.getElementById('number').value);
+
+            for (i = 0; i <= n; i++) {
+                sum = sum + i;
+            }
+            document.getElementById('head').innerHTML = "The sum of natural number" + " " + n + " " + "is" + " " + sum;
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
